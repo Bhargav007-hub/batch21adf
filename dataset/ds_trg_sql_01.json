@@ -1,0 +1,17 @@
+{
+	"name": "ds_trg_sql_01",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_db_01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "batch21sc",
+			"table": "employees"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

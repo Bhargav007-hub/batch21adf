@@ -1,0 +1,15 @@
+{
+	"name": "vbr3adf007",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d2d5e284-8be3-48ed-b9f5-038a5f59072d",
+		"tenantId": "4078c339-109c-41bd-82d9-a6352cb50870"
+	}
+}
