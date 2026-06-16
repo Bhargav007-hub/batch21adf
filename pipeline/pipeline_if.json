@@ -1,0 +1,50 @@
+{
+	"name": "pipeline_if",
+	"properties": {
+		"activities": [
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(pipeline().parameters.wait_time_if, 'ram')",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Wait2",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 10
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 5
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"wait_time_if": {
+				"type": "string",
+				"defaultValue": "ram"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-06-06T08:25:37Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,25 @@
+{
+	"name": "evnt_trg",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "validation_delete_fail",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/bigdata/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/ce257e2f-1827-4a85-9e70-36b00de14abc/resourceGroups/vbrrsg3/providers/Microsoft.Storage/storageAccounts/vbr3stgaccgen2",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

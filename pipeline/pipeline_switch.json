@@ -1,0 +1,83 @@
+{
+	"name": "pipeline_switch",
+	"properties": {
+		"activities": [
+			{
+				"name": "Switch1",
+				"type": "Switch",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"on": {
+						"value": "@pipeline().parameters.switch_param",
+						"type": "Expression"
+					},
+					"cases": [
+						{
+							"value": "bhargav",
+							"activities": [
+								{
+									"name": "bhargav_wait",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 1
+									}
+								}
+							]
+						},
+						{
+							"value": "ram",
+							"activities": [
+								{
+									"name": "ram_wait",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 1
+									}
+								}
+							]
+						},
+						{
+							"value": "vadisetty",
+							"activities": [
+								{
+									"name": "vadisetty_wait",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 1
+									}
+								}
+							]
+						}
+					],
+					"defaultActivities": [
+						{
+							"name": "default_wait",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"switch_param": {
+				"type": "string",
+				"defaultValue": "bhargav"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-06-06T08:25:37Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

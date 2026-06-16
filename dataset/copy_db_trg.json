@@ -1,0 +1,17 @@
+{
+	"name": "copy_db_trg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_db_01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "batch21",
+			"table": "emp_copy_db_01"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
